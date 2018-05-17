@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>九九乘法表--table</title>
+</head>
+<body>
+    <table id="tab_con" width="1000px" border="1">
+
+    </table>
+</body>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+          var $tab_con='';
+          var $tab_con_td='';
+          for(var i=1;i<=9;i++){
+            $tab_con_td='';
+            for(var j=1;j <= i;j++){
+              $tab_con_td += "<td>"+ i+"*"+j+"="+i*j+"</td>";
+            }
+            $tab_con += "<tr>" + $tab_con_td + "</tr>"
+          }
+          $("#tab_con").append($tab_con);
+        })
+    </script>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>问候语</title>
+</head>
+<body>
+   
+</body>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+          var $Data = new Date();
+          var $time = $Data.getHours();
+          if($time>6 && $time <12){
+            alert("上午好");
+          }else if($time >12 && $time <18){
+            alert("下午好");
+          }else if($time >18 && $time <24){
+            alert("晚上好");
+          }else if($time <6){
+            alert("着实该睡了哦，亲！");
+          }
+        })
+    </script>
+</html>
